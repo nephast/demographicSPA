@@ -11,7 +11,7 @@ class DefaultDb {
     try {
       const models = await this.db(this.table)
       .select(filters.column)
-      .limit(10)
+      // .limit(10)
       return { err: null, data: models };
     } catch (e) {
       console.log({ error: 'DB list', stack: e });
